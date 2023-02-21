@@ -6,7 +6,7 @@
 /*   By: grenaud- <grenaud-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:04:58 by grenaud-          #+#    #+#             */
-/*   Updated: 2023/02/18 14:39:12 by grenaud-         ###   ########.fr       */
+/*   Updated: 2023/02/21 16:57:40 by grenaud-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	b_cd(char **argv)
 		i++;
 	if (i != 2)
 		errorminator(ERR_ARG, NULL);
-	if (chdir(argv[1]) < 0)
+	else if (chdir(argv[1]) < 0)
 		errorminator(ERR_CD, argv[1]);
 }
 
